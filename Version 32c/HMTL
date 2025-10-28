@@ -1,0 +1,967 @@
+<!-- Final Fantasy: Legend Edition -->
+
+ <div class="body">
+
+  <!-- Character Info -->
+  <div class="ff7">
+    <h2>Character Info</h2>
+    <div class="char-grid">
+      <label><h4>Name<br><input type="text" name="attr_character_name"></h4></label>
+      <label><h4>Player<br><input type="text" name="attr_player"></h4></label>
+      <label><h4>Race:<select name="attr_race_choice" class="select">   
+        <option value="raen">Raen Au Ra</option>
+        <option value="xaela">Xaela Au Ra</option>
+        <option value="android">Android</option>
+        <option value="bangaa">Bangaa</option>
+        <option value="burme">Burmecian</option>
+        <option value="dwarf">Dwarf</option>
+        <option value="elezen">Elezen</option>
+        <option value="numou">Nu Mou</option>
+        <option value="hume">Hume</option>
+        <option value="humeb">Hume(Al Bhed)</option>
+        <option value="humec">Hume(Garlean)</option>
+        <option value="mithra">Mithra</option>
+        <option value="mog">Moogle</option>
+        <option value="roe">Roegadyn</option>
+        <option value="ronso">Ronso</option>
+        <option value="taru">Tarutaru</option>
+        <option value="varg">Varg</option>
+        <option value="viera">Viera</option></h4></label>
+      <label><h4>Class:<select name="attr_class" class="select">
+        <option name="attr_war" value="war">Warrior</option>
+        <option name="attr_expt" vaule="expt">Expert</option>
+        <option name="attr_mage" value="mage">Mage</option>
+        <option name="attr_adept" value-"adept">Adept</option></h4></label>
+      <label><h4>Job Track<br><select name="attr_job_track" class="select">
+        <option name="attr_normalbuy" value="normalbuy">Fast/Medium/Slow</option>
+        <option name="attr_fullbuy" value="fullbuy">Fast/Medium/Medium/Slow</option></h4></label>
+      <label><h4>Level<br><input type="number" name="attr_level" value="1"></h4></label>
+    </div>
+  </div>
+ 
+  <div class="ff7">
+   <details>
+    <summary><h2>Jobs</h2></summary>
+    <fieldset class="repeating_jobs">
+      <input type="text" name="attr_job_name" placeholder="Job Name">
+      <select name="attr_jobcircle" class="select">
+        <option value="0cir">No Circle</option>
+        <option value="1cir">1st Circle</option>
+        <option value="2cir">2nd Circle</option>
+        <option value="3cir">3rd Circle</option>
+        <option value="4cir">4th Circle</option>
+        <option value="5cir">5th Circle</option>
+        <option value="6cir">6th Circle</option>
+        <option value="7cir">7th Circle</option>
+      </select>
+      <select name="attr_jobspeed" class="select">
+        <option value="fastjob">Fast</option>
+        <option value="medjob">Medium</option>
+        <option value="slowjob">Slow</option>
+      </select>
+    </fieldset>
+   </details>
+  </div>
+  
+  <div class="ff7">
+   <details>
+    <summary><h2>Job Resources</h2></summary>
+    <div class="jobresource-header">
+      <div>Resource</div><div>Current</div><div>Max</div>
+    </div>
+    <fieldset class="repeating_jobresources">
+      <div class="jobresource-row">
+        <input type="text" name="attr_jobresource_name" placeholder="Name">
+        <input type="number" name="attr_jobresource_current" placeholder="0">
+        <input type="number" name="attr_jobresource_max" placeholder="0">
+      </div>
+    </fieldset>
+   </details>    
+  </div>
+ 
+  <!-- Interests -->
+  <div class="ff7">
+   <details>
+    <summary><h2>Interests</h2></summary>
+    <div class="char-grid">
+      <label>Affiliations<br><textarea name="attr_affiliation_desc" placeholder="Affiliations"></textarea></label>
+      <label>Studies<br><textarea name="attr_studies_desc" placeholder="Studies"></textarea></label>
+      <label>Languages<br><textarea name="attr_languages_desc" placeholder="Languages"></label>
+    </div>
+   </details>
+  </div>
+  
+  <!-- AMB -->
+   <div class="ff7">
+     <details>
+      <summary><h2>AMBs</h2></summary>
+      <div class="char-grid">
+      <label>AMB1(+1 at 1/7/12/17)<br><input type="text" name="attr_amb1"></label>
+      <label>AMB2(+1 at 5/9/14/18)<br><input type="text" name="attr_amb2"></label>
+      <label>AMB3(+1 at 7/13/19)<br><input type="text" name="attr_amb3"></label>
+      <label>AMB4(+1 at 10/15/20)<br><input type="text" name="attr_amb4"></label>
+      </div>
+     </details> 
+   </div>  
+   
+  <!-- Abilities -->
+  <div class="ff7">
+    <h2>Core Abilities</h2>
+    <div class="abilities-grid">
+      <div class="ability-box"><div class="ff7">VIG</div><input type="number" name="attr_vig" value="0"></div>
+      <div class="ability-box"><div class="ff7">AGI</div><input type="number" name="attr_agi" value="0"></div>
+      <div class="ability-box"><div class="ff7">VIT</div><input type="number" name="attr_vit" value="0"></div>
+      <div class="ability-box"><div class="ff7">MND</div><input type="number" name="attr_mnd" value="0"></div>
+      <div class="ability-box"><div class="ff7">SPR</div><input type="number" name="attr_spr" value="0"></div>
+      <div class="ability-box"><div class="ff7">PER</div><input type="number" name="attr_per" value="0"></div>
+    </div>
+  </div>
+
+  <!-- Vitals + Combat side by side -->
+  <div class="row">
+    <div class="ff7">
+      <h2>Vitals</h2>
+      <label><h4>Max HP<br><input type="number" name="attr_hp_max" readonly></h4></label>
+      <label><h4>Current HP<br><input type="number" name="attr_hp"></h4></label>
+      <label><h4>Temporary HP<br><input type="number" name="attr_temphp"></h4></label>
+      <label><h4>Limit Break Health Threshold<br><input type="number" name="attr_sos" readonly></h4></label>
+      <label><h4>Max MP<br><input type="number" name="attr_mp_max" readonly></h4></label>
+      <label><h4>Current MP<br><input type="number" name="attr_mp"></h4></label>
+      <label><h4>Temporary MP<br><input type="number" name="attr_tempmp"></h4></label>
+      <label><h4>Extra Initiative Mods<br><input type="number" name="attr_init"></h4></label>
+      <button type="roll" value="/roll 1d20 + @{initiative_base} + @{init} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] &{tracker}">Initiative</button>
+    </div>
+    <div class="ff7">
+      <h2>Combat</h2>
+      <label>
+       <h4>PCM Ability<br>
+        <select name="attr_pcm_ability" class="select">
+         <option value="vig">VIG</option>
+         <option value="agi">AGI</option>
+         <option value="vit">VIT</option>
+         <option value="mnd">MND</option>
+         <option value="spr">SPR</option>
+         <option value="per">PER</option>
+        </select>
+       </h4>
+      </label>
+      <label>
+       <h4>MCM Ability<br>
+        <select name="attr_mcm_ability" class="select">
+         <option value="vig">VIG</option>
+         <option value="agi">AGI</option>
+         <option value="vit">VIT</option>
+         <option value="mnd" selected>MND</option>
+         <option value="spr">SPR</option>
+         <option value="per">PER</option>
+        </select>
+       </h4>
+      </label>
+      <label><h4>Physical Attack<br><input type="number" name="attr_phys_attack" readonly></h4></label>
+      <label><h4>Magical Attack<br><input type="number" name="attr_mag_attack" readonly></h4></label>
+      <label><h4>Physical Defense<br><input type="number" name="attr_phys_defense" readonly></h4></label>
+      <label><h4>Physical Damage Reduction<br><input type="number" name="attr_phys_resist" readonly></h4></label>
+      <label><h4>Magical Defense<br><input type="number" name="attr_mag_defense" readonly></h4></label>
+      <label><h4>Magical Damage Reduction<br><input type="number" name="attr_resist" readonly></h4></label>
+    </div>
+  </div>
+
+  <!-- Positive Status Effects -->
+  <div class="ff7">
+   <details>
+    <summary><h2>Positive Status</h2></summary>
+    <div class="section-box status-box positive-status">
+      <div class="status-grid">
+       <label>
+         <button type="action" name="act_haste">Haste</button>
+         <input type="number" name="attr_haste_dur" placeholder="Dur">
+         <span class="status-desc">Your Actions always resolve first, regardless of Initiative rolled. While you have Haste, your Initiative is treated as higher than any other Participant that does not have the Haste Condition for the purposes of effects (such as Ambush Feats). If multiple Participants have Haste at the same time, use Initiative as a tie-breaker. If all Participants have Haste, the effects of Haste are ignored</span>
+       </label>
+
+       <label>
+         <button type="action" name="act_protect">Protect</button>
+         <input type="number" name="attr_protect_dur" placeholder="Dur">
+         <span class="status-desc">You gain Damage Reduction X (Physical).</span>
+       </label>
+
+       <label>
+         <button type="action" name="act_shell">Shell</button>
+         <input type="number" name="attr_shell_dur" placeholder="Dur">
+         <span class="status-desc">You gain Damage Reduction X (Magical).</span>
+       </label>
+
+       <label>
+         <button type="action" name="act_regen">Regen</button>
+         <input type="number" name="attr_regen_dur" placeholder="Dur">
+         <span class="status-desc">Restore an amount of HP equal to the character’s highest Class Combat Modifier at the end of each Turn.</span>
+       </label>
+
+       <label>
+         <button type="action" name="act_autolife">Auto-Life</button>
+         <input type="number" name="attr_autolife_dur" placeholder="Dur">
+         <span class="status-desc">If your HP is reduced to 0, you are immediately revived and your HP is restored to 20% of its maximum. Auto-Life does not have a duration; since it is triggered by a reduction to 0 HP, it merely activates and is then expended. You can only gain Auto-Life once per Scene.</span>
+       </label>
+
+       <label>
+         <button type="action" name="act_reflect">Reflect</button>
+         <input type="number" name="attr_reflect_dur" placeholder="Dur">
+         <span class="status-desc">Magic effects targeting you instead target a random opponent (die roll or GM choice). Reflect effects cannot stack (i.e. no Reflecting an already Reflected Spell</span>
+       </label>
+      
+       <label>
+         <button type="action" name="act_float">Float</button>
+         <input type="number" name="attr_float_dur" placeholder="Dur">
+         <span class="status-desc">You hover a small distance above the ground or other surface you were previously standing on. You are immune to groundbased effects (at the GM’s discretion). In addition, you can not be afflicted with Knockdown or Prone.</span>
+       </label>
+      
+       <label>
+         <button type="action" name="act_invisible">Invisible</button>
+         <input type="number" name="attr_invisible_dur" placeholder="Dur">
+         <span class="status-desc">You are difficult to see or detect. You cannot be visually confirmed as a single target for effects. Taking an Action removes this effect (the Reposition Action is exempt from this penalty). Outside of Combat, taking an aggressive Action or rolling a Critical Failure on a Skill Roll removes this effect. Non-visual methods of detection are not affected</span>
+       </label>
+     </div>
+    </div>
+   </details>
+
+  <!-- Negative Status Effects -->
+   <details>
+    <summary><h2>Negative Status</h2></summary>
+    <div class="section-box status-box negative-status">
+      <div class="status-grid">
+        <label>
+          <button type="action" name="act_poison">Poison</button>
+          <input type="number" name="attr_poison_dur" placeholder="Dur">
+          <span class="status-desc">Lose 1d4(1d6 if you took an action dur turn) non-elemental damage at the end of each round until cured or duration ends.</span>
+        </label>
+
+        <label>
+          <button type="action" name="act_blind">Blind</button>
+          <input type="number" name="attr_blind_dur" placeholder="Dur">
+          <span class="status-desc">Gain 1 Bane on weapon/spell attack. Cannot roll Critical Successes.</span>
+        </label>
+
+        <label>
+          <button type="action" name="act_silence">Silence</button>
+          <input type="number" name="attr_silence_dur" placeholder="Dur">
+          <span class="status-desc">Prevents spellcasting.</span>
+        </label>
+
+        <label>
+          <button type="action" name="act_paralyze">Paralyze</button>
+          <input type="number" name="attr_paralyze_dur" placeholder="Dur">
+          <span class="status-desc">Unable to act for duration.</span>
+        </label>
+
+        <label>
+          <button type="action" name="act_sleep">Sleep</button>
+          <input type="number" name="attr_sleep_dur" placeholder="Dur">
+          <span class="status-desc">Cannot act until damaged or awakened.</span>
+        </label>
+
+        <label>
+          <button type="action" name="act_confuse">Confuse</button>
+          <input type="number" name="attr_confuse_dur" placeholder="Dur">
+          <span class="status-desc">At the start of each of the Confused character’s Turns, roll 1d6 and consult the following effects. 1 or 2 = attack allies or heal enemies. 3 or 4 = Non-sensical Action, 5 or 6 = Act Normally. Taking damage removes effect. </span>
+        </label>
+ 
+        <label>
+          <button type="action" name="act_petrify">Petrify</button>
+          <input type="number" name="attr_petrify_dur" placeholder="Dur">
+          <span class="status-desc">You cannot take Actions or Reactions, and your Physical Defense and Magical Defense are treated as 0 while Petrified.</span>
+        </label>
+
+        <label>
+          <button type="action" name="act_zombie">Zombie</button>
+          <input type="number" name="attr_zombie_dur" placeholder="Dur">
+          <span class="status-desc">Healed by damage, harmed by healing magic.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_battered">Battered</button>
+          <input type="number" name="attr_battered_dur" placeholder="Dur">
+          <span class="status-desc">You cannot recover HP.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_berserk">Berserk</button>
+          <input type="number" name="attr_berserk_dur" placeholder="Dur">
+          <span class="status-desc">You are forced to make a single Weapon Attack Action each Round, and nothing else. Successful Attacks while Berserk gain Damage Spiking 1.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_entangle">Entangled</button>
+          <input type="number" name="attr_entangle_dur" placeholder="Dur">
+          <span class="status-desc">You cannot change Rows or make Weapon Attack Actions.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_bleed">Bleeding</button>
+          <input type="number" name="attr_bleed_dur" placeholder="Dur">
+          <span class="status-desc">1d4 damage per Round. Each subsequent Round, the d4 gains a cumulative +1 bonus.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_charm">Charm</button>
+          <input type="number" name="attr_charm_dur" placeholder="Dur">
+          <span class="status-desc">You are placed under the control of whomever Charmed you. The Participant may take one of your Actions in lieu of their own, but cannot cause you to self-harm without breaking the effect.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_prone">Prone</button>
+          <input type="number" name="attr_prone_dur" placeholder="Dur">
+          <span class="status-desc">Your character is flat on the ground. Melee Attacks against you have a Boon and Ranged Attacks have a Bane; conversely Melee Attacks you make from Prone have a Bane and Ranged Attacks you make from Prone have a Boon. Spell Attacks are unaffected, and you cannot perform other Actions without standing up. You may stand up from Prone as an Action. After using the Action, your next d20 roll suffers a penalty equal to the Rounds you remained Prone. As an Action, this condition may be self-inflicted at will.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_knockdown">Knockdown</button>
+          <input type="number" name="attr_knockdown_dur" placeholder="Dur">
+          <span class="status-desc">You are knocked to the ground and must use an Action to stand back up to use any subsequent Actions or Reactions. After using the Action to get back up, your next d20 roll suffers a penalty equal to the number of Rounds you remain in Knockdown until you stand up.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_slow">Slow</button>
+          <input type="number" name="attr_slow_dur" placeholder="Dur">
+          <span class="status-desc">Your Actions always resolve last, regardless of Initiative order. If multiple Participants have Slow at the same time, use Initiative as a tie-breaker. If all Participants have Slow, the effects of Slow are ignored.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_seal">Seal</button>
+          <input type="number" name="attr_seal_dur" placeholder="Dur">
+          <span class="status-desc">You cannot take Actions that require the expenditure of MP.</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_stop">Stop</button>
+          <input type="number" name="attr_stop_dur" placeholder="Dur">
+          <span class="status-desc">You cannot take Actions or Reactions, and when Stop is removed you must reroll your Initiative..</span>
+        </label>
+       
+        <label>
+          <button type="action" name="act_stun">Stun</button>
+          <input type="number" name="attr_stun_dur" placeholder="Dur">
+          <span class="status-desc">You cannot take Actions, but you may take Reactions.</span>
+        </label>
+       
+      </div>
+     </details>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="ff7">
+  <div class="skills-header">
+    <div>Skills</div>
+    <div>Stat</div>
+    <div>Training</div>
+    <div>Total</div>
+    <div>Skill Defense</div>
+  </div>
+
+  <!-- Acrobatics -->
+  <div class="skill-row">
+    <button type="roll" name="roll_acrobatics"
+      value="&{template:default} {{name=Acrobatics}} {{Roll=[[1d20+@{acrobatics_total} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{Stat=@{acrobatics_stat_val}}} {{Training=@{acrobatics_training_bonus}}} {{Total=@{acrobatics_total}}} {{Defense=@{acrobatics_def}}}">
+      Acrobatics
+    </button>
+    <select name="attr_acrobatics_stat" class="select">
+      <option value="vig">VIG</option><option value="agi">AGI</option>
+    </select>
+    <select name="attr_acrobatics_training" class="select">
+      <option value="untrained">Untrained</option>
+      <option value="trained">Trained</option>
+      <option value="origin">Origin</option>
+    </select>
+    <input type="number" name="attr_acrobatics_total" readonly>
+    <input type="number" name="attr_acrobatics_def" readonly>
+  </div>
+
+  <!-- Athletics -->
+  <div class="skill-row">
+    <button type="roll" name="roll_athletics"
+      value="&{template:default} {{name=Athletics}} {{Roll=[[1d20+@{athletics_total} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{Stat=@{athletics_stat_val}}} {{Training=@{athletics_training_bonus}}} {{Total=@{athletics_total}}} {{Defense=@{athletics_def}}}">
+      Athletics
+    </button>
+    <select name="attr_athletics_stat" class="select">
+      <option value="vig">VIG</option>
+      <option value="vit">VIT</option>
+    </select>
+    <select name="attr_athletics_training" class="select">
+      <option value="untrained">Untrained</option>
+      <option value="trained">Trained</option>
+      <option value="origin">Origin</option>
+    </select>
+    <input type="number" name="attr_athletics_total" readonly>
+    <input type="number" name="attr_athletics_def" readonly>
+  </div>
+
+  <!-- Larceny -->
+  <div class="skill-row">
+    <button type="roll" name="roll_larceny"
+      value="&{template:default} {{name=Larceny}} {{Roll=[[1d20+@{larceny_total} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{Stat=@{larceny_stat_val}}} {{Training=@{larceny_training_bonus}}} {{Total=@{larceny_total}}} {{Defense=@{larceny_def}}}">
+      Larceny
+    </button>
+    <select name="attr_larceny_stat" class="select">
+      <option value="agi">AGI</option>
+      <option value="per">PER</option>
+    </select>
+    <select name="attr_larceny_training" class="select">
+      <option value="untrained">Untrained</option>
+      <option value="trained">Trained</option>
+      <option value="origin">Origin</option>
+    </select>
+    <input type="number" name="attr_larceny_total" readonly>
+    <input type="number" name="attr_larceny_def" readonly>
+  </div>
+
+  <!-- Misdirection -->
+  <div class="skill-row">
+    <button type="roll" name="roll_misdirection"
+      value="&{template:default} {{name=Misdirection}} {{Roll=[[1d20+@{misdirection_total} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{Stat=@{misdirection_stat_val}}} {{Training=@{misdirection_training_bonus}}} {{Total=@{misdirection_total}}} {{Defense=@{misdirection_def}}}">
+      Misdirection
+    </button>
+    <select name="attr_misdirection_stat" class="select">
+      <option value="agi">AGI</option>
+      <option value="mnd">MND</option>
+    </select>
+    <select name="attr_misdirection_training" class="select">
+      <option value="untrained">Untrained</option>
+      <option value="trained">Trained</option>
+      <option value="origin">Origin</option>
+    </select>
+    <input type="number" name="attr_misdirection_total" readonly>
+    <input type="number" name="attr_misdirection_def" readonly>
+  </div>
+
+  <!-- Orienteering -->
+  <div class="skill-row">
+    <button type="roll" name="roll_orienteering"
+      value="&{template:default} {{name=Orienteering}} {{Roll=[[1d20+@{orienteering_total} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{Stat=@{orienteering_stat_val}}} {{Training=@{orienteering_training_bonus}}} {{Total=@{orienteering_total}}} {{Defense=@{orienteering_def}}}">
+      Orienteering
+    </button>
+    <select name="attr_orienteering_stat" class="select">
+      <option value="mnd">MND</option>
+      <option value="spr">SPR</option>
+    </select>
+    <select name="attr_orienteering_training" class="select">
+      <option value="untrained">Untrained</option>
+      <option value="trained">Trained</option>
+      <option value="origin">Origin</option>
+    </select>
+    <input type="number" name="attr_orienteering_total" readonly>
+    <input type="number" name="attr_orienteering_def" readonly>
+  </div>
+
+  <!-- Ride -->
+  <div class="skill-row">
+    <button type="roll" name="roll_ride"
+      value="&{template:default} {{name=Ride}} {{Roll=[[1d20+@{ride_total} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{Stat=@{ride_stat_val}}} {{Training=@{ride_training_bonus}}} {{Total=@{ride_total}}} {{Defense=@{ride_def}}}">
+      Ride
+    </button>
+    <select name="attr_ride_stat" class="select">
+      <option value="vig">VIG</option><option value="agi">AGI</option>
+    </select>
+    <select name="attr_ride_training" class="select">
+      <option value="untrained">Untrained</option>
+      <option value="trained">Trained</option>
+      <option value="origin">Origin</option>
+    </select>
+    <input type="number" name="attr_ride_total" readonly>
+    <input type="number" name="attr_ride_def" readonly>
+  </div>
+
+  <!-- Presence -->
+  <div class="skill-row">
+    <button type="roll" name="roll_presence"
+      value="&{template:default} {{name=Presence}} {{Roll=[[1d20+@{presence_total} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{Stat=@{presence_stat_val}}} {{Training=@{presence_training_bonus}}} {{Total=@{presence_total}}} {{Defense=@{presence_def}}}">
+      Presence
+    </button>
+    <select name="attr_presence_stat" class="select">
+      <option value="mnd">MND</option>
+      <option value="per">PER</option>
+    </select>
+    <select name="attr_presence_training" class="select">
+      <option value="untrained">Untrained</option>
+      <option value="trained">Trained</option>
+      <option value="origin">Origin</option>
+    </select>
+    <input type="number" name="attr_presence_total" readonly>
+    <input type="number" name="attr_presence_def" readonly>
+  </div>
+  <div>
+   <label>
+    <input type="checkbox" name="attr_sturdy" value="1">
+    Sturdy (+5 to all Skill Defenses)
+   </label>
+  </div> 
+</div>
+
+
+
+
+  <!-- Weapons -->
+  
+  <div class="ff7">
+    <details>
+      <summary><h2>Weapons</h2></summary>
+      <label><h4>Physical Weapons</h4></label>
+      <fieldset class="repeating_weapons">
+        <input type="text" name="attr_phyweapon_name" placeholder="Weapon">
+        <button type="roll" value="&{template:fflb} {{name=@{phyweapon_name}}} {{job=[[ 1d20 + @{phys_attack} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{desc=@{phyweapon_tags}}}">Attack</button> 
+        <input type="text" name="attr_phyweapon_damage" placeholder="Damage">
+        <button type="roll" value="/roll @{phyweapon_damage}r<[[@{brutal_rank}]] + (?{Extra Effort Dice?|0}d4)">Damage</button>
+        <textarea name="attr_phyweapon_tags" placeholder="Tags/Description"></textarea>
+        <label>        
+         <h4>Brutal Rank<br>
+         <select name="attr_brutal_rank" class="select">
+          <option value="0">None</option>
+          <option value="1">Brutal 1</option>
+          <option value="2">Brutal 2</option>
+          <option value="3">Brutal 3</option>
+          <option value="4">Brutal 4</option>
+          <option value="5">Brutal 5</option>
+         </select>
+         </h4>
+        </label>
+      </fieldset>
+      <label><h4>Arcane Weapons</h4></label>
+      <fieldset class="repeating_weapons">
+        <input type="text" name="attr_arcweapon_name" placeholder="Weapon">
+        <button type="roll" value="&{template:fflb} {{name=@{arcweapon_name}}} {{job=[[ 1d20 + @{mag_attack} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}} {{desc=@{arcweapon_tags}}}">Attack</button> 
+        <input type="text" name="attr_arcweapon_damage" placeholder="DMG">
+        <button type="roll" value="/roll @{arcweapon_damage}r<[[@{mbrutal_rank}]] + (?{Extra Effort Dice?|0}d4)">Damage</button>
+        <textarea name="attr_arcweapon_tags" placeholder="Tags/Description"></textarea>
+        <label>
+         <h4>Brutal Rank<br>
+         <select name="attr_mbrutal_rank" class="select">
+          <option value="0">None</option>
+          <option value="1">Brutal 1</option>
+          <option value="2">Brutal 2</option>
+          <option value="3">Brutal 3</option>
+          <option value="4">Brutal 4</option>
+          <option value="5">Brutal 5</option>
+         </select>
+         </h4>
+        </label>
+      </fieldset>
+    </details>  
+  </div>
+    
+  <!-- Armor -->
+      
+  <div class="ff7">
+   <details>
+      <summary><h2>Armor</h2></summary>
+        <input type="text" name="attr_armor_name" placeholder="Armor">
+        <input type="number" name="attr_armor_pdef" placeholder="PDEF">
+        <input type="number" name="attr_armor_mdef" placeholder="MDEF">
+        <input type="number" name="attr_armor_pdmgreduction" placeholder="PDR">
+        <input type="number" name="attr_armor_mdmgreduction" placeholder="MDR">
+        <textarea name="attr_armor_tags" placeholder="Tags/Descriptions"></textarea>
+   </details>  
+  </div>
+  
+
+  <div class="ff7">
+   <details>
+    <summary><h3>Resources</h3></summary>
+    <div class="resources-row">
+    <label><h4>Gil<br><input type="number" name="attr_gil"></h4></label>
+    <label><h4>Loot Slots<br><input type="text" name="attr_lootslots_name" placeholder="Highest Circle+1"></h4></label>
+    <label><h4>Stake<br><input type="text" name="attr_stake_name" placeholder="2+Lvl+(PER*2)"></h4></label>
+    <label><h4>Resources<br><input type="text" name="attr_resources_name" placeholder="8+PER+Highest Circle"></h4></label>
+    </div>
+   </details>
+  </div>
+
+  <div class="ff7">
+   <details> 
+    <summary><h3>Consumables</h3></summary>
+    <fieldset class="repeating_consumables">
+      <div class="consumables-row">
+        <input type="text" name="attr_consumables_name" placeholder="Consumable Name">
+        <select name="attr_consumbale_choice" class="select">   
+         <option value="lesserconsumable">Lesser Consumable</option>
+         <option value="greaterconsumable">Greater Consumable</option>
+         <option value="relicconsumable">Relic Consumable</option>
+         <option value="artifactconsumable">Artifact Consumable</option>
+        <input type="text" name="attr_consumable_desc" placeholder="Effects">
+      </div>
+    </fieldset>
+   </details> 
+  </div>
+  
+
+  <div class="ff7">
+   <details> 
+    <summary><h3>Magic Items</h3></summary>
+    <fieldset class="repeating_magicitems">
+      <div class="magicitems-row">
+        <input type="text" name="attr_magicitem_name" placeholder="Magic Item Name">
+        <select name="attr_magicitem_choice" class="select">   
+         <option value="lesseritem">Lesser Magic Item</option>
+         <option value="greateritem">Greater Magic Item</option>
+         <option value="relicitem">Relic Magic Item</option>
+         <option value="artifactitem">Artifact Magic Item</option>
+        <input type="text" name="attr_magicitem_desc" placeholder="Tags">
+      </div>
+    </fieldset>
+   </details> 
+  </div>
+  
+  <div class="ff7">
+   <details> 
+    <summary><h3>General Invetory</h3></summary>
+    <fieldset class="repeating_generalitems">
+      <div class="generalitems-row">
+        <input type="text" name="attr_generalitem_name" placeholder="Name">
+        <input type="text" name="attr_generalitem_desc" placeholder="Description">
+      </div>
+    </fieldset>
+   </details> 
+  </div>
+
+  <!-- Magic -->
+  <div class="ff7">
+   <details>
+    <summary><h2>Magic Spells</h2></summary>
+    <div class="spell-line">
+     <label>
+      <span>Spell Slots</span>
+      <input type="number" name="attr_spell_slots" plceholder="Spell Slots" style="width: 60px; text-align: center;" readonly>
+      </label>
+     <label style="margin-left: 1em;">
+      <span>Improved Cast</span>
+       <select name="attr_improved_cast" class="select" style="width: 200px;">
+        <option value="0">None</option>
+        <option value="2">Improved Cast 1 (+2)</option>
+        <option value="3">Improved Cast 2 (+3)</option>
+        <option value="4">Improved Cast 3 (+4)</option>
+       </select>
+     </label>
+</div>
+    <div class="magic-header">
+      <div>Spell</div><div>Effect</div>
+    </div>
+    <fieldset class="repeating_spells">
+      <div class="spell-grid">
+        <input type="text" name="attr_spell_name" placeholder="Spell">
+        <textarea name="attr_spell_effect" placeholder="Effect"></textarea>
+        <button type="roll" name="attr_spell_cast" value="&{template:fflb} {{name=@{spell_name} Cast Roll}} {{job=[[ 1d20 + ?{Spending MP?|0} + @{improved_cast}]]}} {{desc=@{spell_effect}}}">Cast</button>
+        <button type="roll" value="&{template:fflb} {{name=@{spell_name} Attack Roll}} {{job=[[ 1d20 + @{mag_attack} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}}">Attack</button>
+      </div>
+    </fieldset>
+   </details>
+  </div>
+  
+  <!-- Grimoire Magic -->
+  <div class="ff7">
+   <details>
+    <summary><h2>Grimoire Spells</h2></summary>
+    <label><h4>Grimoire Spell Slots = 2 + (Scholar Circlex2)(if applicable)</h4></label>  
+    <input type="number" name="attr_grimoire_slots" placeholder="Grimoire Spell Slots">
+    <div class="magic-header">
+      <div>Spell</div><div>Effect</div>
+    </div>
+    <fieldset class="repeating_gspells">
+      <div class="spell-grid">
+        <input type="text" name="attr_gspell_name" placeholder="Spell">
+        <textarea name="attr_gspell_effect" placeholder="Effect"></textarea>
+        <button type="roll" name="attr_gspell_cast" value="&{template:fflb} {{name=@{gspell_name} Cast Roll}} {{job=[[ 1d20 + ?{Spending MP?|0} + @{improved_cast}]]}} {{desc=@{gspell_effect}}}">Cast</button>
+        <button type="roll" name="attr_gspell_attack" value="&{template:fflb} {{name=@{gspell_name} Attack Roll}} {{job=[[ 1d20 + @{mag_attack} + [[ [[?{Boons/Banes Dice?|0}]]d6 * ?{Is it a Boon or Bane?|Boon,1|Bane,-1} ]] ]]}}">Attack</button>
+      </div>
+    </fieldset>
+   </details>
+  </div>
+  
+  <div class="ff7">
+   <details> 
+    <summary><h3>Job Abilities</h3></summary>
+    <fieldset class="repeating_jobabilities">
+      <div class="jobability-row">
+        <input type="text" name="attr_jobability_name" placeholder="Ability Name">
+        <input type="text" name="attr_jobability_job" placeholder="Job Ability Source">
+        <button type="roll" name="roll_jobability" 
+         value="&{template:fflb} {{name=@{jobability_name}}} {{job=@{jobability_job}}} {{desc=@{jobability_desc}}}">
+         Use
+        </button>
+        <textarea name="attr_jobability_desc" placeholder="Description / Effect"></textarea>
+      </div>
+    </fieldset>
+   </details> 
+  </div>
+  
+  <div class="ff7">
+   <details>
+    <summary><h2>Feats</h2></summary>
+    <fieldset class="repeating_feats">
+      <input type="text" name="attr_feat_name" placeholder="Feat">
+      <button type="roll" name="roll_feat" 
+       value="&{template:fflb} {{name=@{feat_name}}} {{job=Feat}} {{desc=@{feat_desc}}}">
+       Use
+      </button>
+      <textarea name="attr_feat_desc" placeholder="Description"></textarea>
+    </fieldset>
+   </details>
+  </div>
+
+  <div class="ff7">
+   <details> 
+    <summary><h2>Limit Breaks</h2></summary>
+    <div class="limitbreak-header">
+      <div>Name</div><div>Job</div><div>Effect</div>
+    </div>
+    <fieldset class="repeating_limitbreaks">
+     <input type="text" name="attr_lb_name" placeholder="Limit Break Name">
+     <input type="text" name="attr_lb_job" placeholder="Job Source">
+     <button type="roll" name="roll_limitbreak" 
+      value="&{template:fflb} {{name=@{lb_name}}} {{job=@{lb_job}}} {{desc=@{lb_desc}}}">
+      Use
+     </button>
+     <textarea name="attr_lb_desc" placeholder="Description"></textarea>
+    </fieldset>
+  </details>    
+  </div>
+
+  <!-- Companions -->
+  <div class="ff7">
+   <details> 
+    <summary><h2>Companions</h2></summary>
+    <fieldset class="repeating_companions">
+      <input type="text" name="attr_companion_name" placeholder="Name">
+      <input type="text" name="attr_companion_role" placeholder="Role/Effect">
+      <textarea name="attr_companion_notes" placeholder="Notes"></textarea>
+    </fieldset>
+   </details>    
+  </div>
+
+  <!-- Notes -->
+  <div class="ff7">
+   <details> 
+    <summary><h2>Notes</h2></summary>
+      <textarea name="attr_notes" placeholder="Notes"></textarea>
+   </details>    
+  </div>
+
+</div>
+
+<script type="text/worker">
+  // Auto-calculate SOS as half of Max HP
+  on("change:hp_max", function() {
+    getAttrs(["hp_max"], function(values) {
+      let hpMax = parseInt(values.hp_max) || 0;
+      let sos = Math.floor(hpMax / 2);
+      setAttrs({ sos: sos });
+    });
+  });
+</script>
+
+<script type="text/worker">
+const skills = [
+  "acrobatics",
+  "athletics",
+  "larceny",
+  "misdirection",
+  "orienteering",
+  "ride",
+  "presence"
+];
+
+skills.forEach(skill => {
+  on(`change:level change:vig change:agi change:vit change:mnd change:spr change:per change:${skill}_stat change:${skill}_training change:sturdy`, function() {
+    getAttrs(["level","vig","agi","vit","mnd","spr","per",`${skill}_stat`,`${skill}_training`,"sturdy"], function(v) {
+      let level = parseInt(v.level) || 0;
+      let statChoice = v[`${skill}_stat`] || "vig";
+      let statVal = parseInt(v[statChoice]) || 0;
+      let training = v[`${skill}_training`] || "untrained";
+      let sturdy = parseInt(v.sturdy) || 0;  // 1 if checked, 0 if not
+
+      let trainingBonus = 0;
+      if (training === "untrained") {
+        trainingBonus = Math.floor(level / 4);
+      } else if (training === "trained") {
+        trainingBonus = Math.floor(level / 2);
+      } else if (training === "origin") {
+        trainingBonus = level;
+      }
+
+      let total = statVal + trainingBonus;
+      let defense = total + 10 + (sturdy ? 5 : 0); // +5 if Sturdy active
+
+      setAttrs({
+        [`${skill}_stat_val`]: statVal,
+        [`${skill}_training_bonus`]: trainingBonus,
+        [`${skill}_total`]: total,
+        [`${skill}_def`]: defense
+      });
+    });
+  });
+});
+</script>
+
+<script type="text/worker">
+on("change:class change:level change:vit change:spr change:race_choice", function() {
+  getAttrs(["class", "level", "vit", "spr", "race_choice"], function(v) {
+    let job = (v.class || "").toLowerCase();
+    let level = parseInt(v.level) || 1;
+    let vit = parseInt(v.vit) || 0;
+    let spr = parseInt(v.spr) || 0;
+    let race = (v.race_choice || "").toLowerCase();
+
+    // Class growths
+    const classData = {
+      "war":   { hp: 10, mp: 6 },
+      "expt":  { hp: 8, mp: 6 },
+      "mage":  { hp: 6,  mp: 10 },
+      "adept": { hp: 8,  mp: 8 }
+    };
+
+    let baseHP = classData[job] ? classData[job].hp : 8;
+    let baseMP = classData[job] ? classData[job].mp : 6;
+
+    // Roegadyn racial bonus: +1 HP per level
+    if (race === "roe") {
+      baseHP += 1;
+    }
+
+    let maxHP = baseHP * level * Math.max(1, vit);
+    let maxMP = baseMP * level * Math.max(1, spr);
+    let sos = Math.floor(maxHP / 2);
+
+    setAttrs({
+      hp_max: maxHP,
+      mp_max: maxMP,
+      sos: sos
+    });
+
+    console.log(`Class: ${job}, Race: ${race}, BaseHP: ${baseHP}, BaseMP: ${baseMP}, MaxHP: ${maxHP}, MaxMP: ${maxMP}`);
+  });
+});
+</script>
+
+<rolltemplate class="sheet-rolltemplate-fflb">
+  <div class="rt-card">
+    <div class="rt-header">{{name}}</div>
+    <div class="rt-subheader">{{job}}</div>
+    <div class="rt-desc">{{desc}}</div>
+  </div>
+</rolltemplate>
+
+<script type="text/worker">
+on("change:level change:race_choice change:pcm_ability change:mcm_ability change:vig change:agi change:vit change:mnd change:spr change:per change:armor_pdef change:armor_mdef change:armor_mdmgreduction change:armor_pdmgreduction change:improved_cast", function() {
+  getAttrs([
+    "level","race_choice",
+    "pcm_ability","mcm_ability",
+    "vig","agi","vit","mnd","spr","per",
+    "armor_pdef","armor_mdef","armor_mdmgreduction","armor_pdmgreduction",
+    "improved_cast"
+  ], function(v) {
+
+    const level = parseInt(v.level) || 0;
+    const race = (v.race_choice || "").toLowerCase();
+
+    const stats = {
+      vig: parseInt(v.vig) || 0,
+      agi: parseInt(v.agi) || 0,
+      vit: parseInt(v.vit) || 0,
+      mnd: parseInt(v.mnd) || 0,
+      spr: parseInt(v.spr) || 0,
+      per: parseInt(v.per) || 0
+    };
+
+    let pcm_val = stats[v.pcm_ability] || 0;
+    let mcm_val = stats[v.mcm_ability] || 0;
+
+    if (race === "numou") {
+      pcm_val = Math.floor((stats[v.pcm_ability]) * 0.5) || 0;
+      mcm_val = Math.ceil((stats[v.mcm_ability]) * 1.5) || 0;
+    }
+
+    const armor_pdef = parseInt(v.armor_pdef) || 0;
+    const armor_mdef = parseInt(v.armor_mdef) || 0;
+    const armor_pdmgreduction = parseInt(v.armor_pdmgreduction) || 0;
+    const armor_mdmgreduction = parseInt(v.armor_mdmgreduction) || 0;
+    const improved_cast = parseInt(v.improved_cast) || 0;
+
+    // Attack values
+    const phys_attack = Math.floor(level / 2) + pcm_val;
+    const mag_attack  = Math.floor(level / 2) + mcm_val;
+
+    // Defense values
+    const phys_defense = pcm_val + 10 + armor_pdef + Math.floor(level * 0.5);
+    const mag_defense  = mcm_val + 10 + armor_mdef + Math.floor(level * 0.5) + improved_cast;
+
+    // Damage Reduction
+    const phys_resist = armor_pdmgreduction;
+    const resist = armor_mdmgreduction;
+
+    // Initiative base
+    const initiative_base = stats.agi + Math.floor(level / 2);
+
+    setAttrs({
+      phys_attack,
+      mag_attack,
+      phys_defense,
+      mag_defense,
+      phys_resist,
+      resist,
+      initiative_base
+    });
+  });
+});
+</script>
+
+
+<script type="text/worker">
+on("change:class change:level change:mcm_ability change:vig change:agi change:vit change:mnd change:spr change:per change:race_choice", function() {
+  getAttrs(["class", "level", "vig","agi","vit","mnd","spr","per","mcm_ability","race_choice"], function(v) {
+    let job = (v.class || "").toLowerCase();
+    let level = parseInt(v.level) || 1;
+    let race = (v.race_choice || "").toLowerCase();
+
+    const stats = {
+      vig: parseInt(v.vig) || 0,
+      agi: parseInt(v.agi) || 0,
+      vit: parseInt(v.vit) || 0,
+      mnd: parseInt(v.mnd) || 0,
+      spr: parseInt(v.spr) || 0,
+      per: parseInt(v.per) || 0
+    };
+
+    // MCM from selected stat
+    let mcm_stat = stats[v.mcm_ability] || 0;
+    let mcm_val = mcm_stat;
+
+    // Apply Nu Mou racial bonus to MCM
+    if (race === "numou") {
+      mcm_val = Math.floor(mcm_stat * 1.5) || 0;
+    }
+
+    // Base spell slots = MCM + class base
+    let baseSlots = 0;
+    if (job === "mage") {
+      if (level >= 2) baseSlots += 1; // +1 at 2nd level
+      if (level >= 4) baseSlots += 1;
+      if (level >= 6) baseSlots += 1;
+      if (level >= 8) baseSlots += 1;
+      if (level >= 10) baseSlots += 1;
+      if (level >= 12) baseSlots += 1;
+      if (level >= 14) baseSlots += 1;
+      if (level >= 16) baseSlots += 1;
+      if (level >= 18) baseSlots += 1;
+      if (level >= 20) baseSlots += 1;
+    } else {
+      if (level >= 4) baseSlots += 1; // +1 at 4th level
+      if (level >= 8) baseSlots += 1;
+      if (level >= 12) baseSlots += 1;
+      if (level >= 16) baseSlots += 1;
+      if (level >= 20) baseSlots += 1;
+    }
+
+    let totalSlots = mcm_val + baseSlots;
+
+    setAttrs({
+      spell_slots: totalSlots
+    });
+  });
+});
+</script>
