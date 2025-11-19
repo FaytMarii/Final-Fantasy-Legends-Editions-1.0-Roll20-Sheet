@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css?family=Silkscreen&display=swap');
+
+/* ===== FF:LE  ===== */
+
+.charsheet {
+    background-color: black; /* or #000000 */
+    color: white; /* To ensure text is visible on black */
+}
+
+/* For dark mode specific styling */
+body.sheet-darkmode .charsheet {
+    background-color: black;
+    color: white;
+}
+
+.body{
+  background-color: black;
+  background-position: -150px 0;;
+}
+
+.div.ff7{
+  border: solid 1px #424542;
+  box-shadow: 1px 1px #e7dfe7,
+              -1px -1px #e7dfe7,
+              1px -1px #e7dfe7,
+              -1px 1px #e7dfe7,
+              0 -2px #9c9a9c,
+              -2px 0 #7b757b,
+              0 2px #424542;
+  width: auto;
+  padding: 5px 10px;
+  margin: 10px auto;
+  
+  background: #04009d;
+  background: -moz-linear-gradient(top,  #04009d 0%, #06004d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#04009d), color-stop(100%,#06004d));
+  background: -webkit-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: -o-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: -ms-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: linear-gradient(to bottom,  #04009d 0%,#06004d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04009d', endColorstr='#06004d',GradientType=0 );
+
+
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+.div.ff7 *{
+  color: #eff1ff;
+  text-shadow: 2px 2px #212421,
+               1px 1px #212021;
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 5px 0;
+  background-color: #04009d;
+  background: -moz-linear-gradient(top,  #04009d 0%, #06004d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#04009d), color-stop(100%,#06004d));
+  background: -webkit-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: -o-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: -ms-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: linear-gradient(to bottom,  #04009d 0%,#06004d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04009d', endColorstr='#06004d',GradientType=0 );;
+}
+
+.section-box h2 {
+  background: #3366cc;
+  color: white;
+  font-size: 1em;
+  margin: -8px -8px 8px -8px;
+  padding: 4px;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+}
+
+.section-box h3 {
+  color: white;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #3366cc;
+  padding-bottom: 2px;
+}
+ /* Stat Names */
+.section-box h4 {
+  color: white;
+}
+
+/* Layouts */
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.abilities-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+
+.ability-box {
+  border: 2px solid #3366cc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 4px;
+  background: white;
+}
+
+.ability-box .label {
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 3px;
+}
+
+.ability-box input {
+  width: 80%;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.vitals, .combat, .weapons, .armor {
+  flex: 1;
+}
+
+/* Inputs */
+input, select, textarea {
+  border: 1px solid #3366cc;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 0.9em;
+}
+
+select {
+    box-sizing: border-box;
+    width: auto;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 40px;
+  width: 95%;
+}
+
+/* Skills section box */
+.skills {
+  margin-top: 10px;
+}
+
+/* Grid for headers + rows */
+.skills-header,
+.skill-row {
+  display: grid;
+  grid-template-columns: 220px 80px 100px 60px 50px; /* adjust widths */
+  gap: 30px;
+  align-items: center;
+}
+
+/* Make header bold */
+.skills-header {
+  font-weight: bold;
+  color: white;
+  border-bottom: 2px solid #444;
+  margin-bottom: 4px;
+}
+
+/* Inputs/dropdowns aligned nicely */
+.skill-row select,
+.skill-row input[type=number] {
+  width: 127%;
+  text-align: center;
+}
+
+/* Roll button styled like a label */
+.skill-row button {
+  width: 100%;
+  text-align: left;
+  background: #003366;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 13px;
+}
+.skill-row button:hover {
+  background: #004c99;
+}
+
+/* Magic */
+.magic-header {
+  display: grid;
+  grid-template-columns: 1.45fr 80px 80px 3fr;
+  font-weight: bold;
+  border-bottom: 2px solid #3366cc;
+  background: #e6ecf5;
+  padding: 4px;
+}
+
+.spell-row {
+  display: grid;
+  grid-template-columns: 215px auto auto;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 2px;
+}
+
+.spell-row textarea {
+  width: 95%;
+  min-height: 30px;
+  resize: vertical;
+}
+
+/* Fieldsets */
+fieldset {
+  border: 1px solid #fff;
+  margin: 4px 0;
+  padding: 4px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* Job Abilities */
+.jobability-row input[type="text"] {
+  width: 95%;
+}
+.jobability-row textarea {
+  width: 95%;
+  min-height: 40px;
+}
+
+/* Magic Items */
+.magicitems-row input[type="text"] {
+    width: auto;
+}
+
+/* Consumables */
+.consumables-row input[type="text"] {
+    width: auto;
+}
+
+/* Resources */
+.resources-row input[type="text"] {
+    width: auto;
+}
+
+/* Job Resources */
+.jobresource-header, .jobresource-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+.jobresource-header {
+  background: #e6ecf5;
+  border-bottom: 2px solid #3366cc;
+  font-weight: bold;
+  padding: 4px;
+}
+
+.jobresource-row {
+  border-bottom: 1px solid #ccc;
+  padding: 2px;
+}
+
+.jobresource-row input[type="text"] { width: 95%; text-align: left; }
+.jobresource-row input[type="number"] { width: 70px; text-align: center; }
+
+/* Buttons */
+button[type="roll"] {
+  background: #3366cc;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="roll"]:hover {
+  background: #2851a3;
+}
+
+/* ===== Limit Breaks ===== */
+.limitbreak-header, .limitbreak-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  align-items: center;
+  text-align: center;
+}
+
+.limitbreak-header {
+  background: #e6ecf5;
+  border-bottom: 2px solid #3366cc;
+  font-weight: bold;
+  padding: 4px;
+}
+
+.limitbreak-row {
+  border-bottom: 1px solid #ccc;
+  padding: 4px;
+  gap: 6px;
+}
+
+.limitbreak-row input[type="text"] {
+  width: 95%;
+  text-align: left;
+}
+
+.limitbreak-row textarea {
+  width: 95%;
+  min-height: 40px;
+  resize: vertical;
+}
+/* ===== Status Effects ===== */
+.statuses h3 {
+  margin-top: 6px;
+  margin-bottom: 4px;
+  color: white;
+  font-size: 0.9em;
+}
+
+.status-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.status-entry {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+}
+
+.toggle-btn {
+  position: relative;
+  display: inline-block;
+}
+
+.toggle-btn input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-btn span {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 2px solid #3366cc;
+  border-radius: 6px;
+  background: #f0f4ff;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn input[type="checkbox"]:checked + span {
+  background: #3366cc;
+  color: white;
+}
+
+.status-entry input[type="text"] {
+  width: 60px;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 2px;
+}
+
+/* Buttons */
+button[type="roll"] {
+  background: #3366cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="roll"]:hover {
+  background: #2851a3;
+}
+
+/* Limit Break Roll Template */
+.sheet-rolltemplate-fflb .sheet-rt-card {
+  background: #004d8c;
+  border: 2px solid #FFD700;
+  border-radius: 6px;
+  font-family: "Silkscreen";
+  font-size: 20px;
+  padding: 6px;
+  color: #fff;
+}
+
+.sheet-rolltemplate-fflb .sheet-rt-header {
+  background: #d6c530;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  padding: 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.sheet-rolltemplate-fflb .sheet-rt-subheader {
+  text-align: center;
+  font-style: italic;
+  font-style: bold;
+  font-size: 15px;
+  margin: 2px 0 5px 0;
+}
+
+.sheet-rolltemplate-fflb .sheet-rt-desc {
+  white-space: pre-wrap;
+  font-style: bold;
+  line-height: 1.3em;
+  font-size: 12px;
+}
+
+body{
+  background-color: black;
+  background-position: -150px 0;
+}
+div.ff7{
+  border: solid 1px #424542;
+  box-shadow: 1px 1px #e7dfe7,
+              -1px -1px #e7dfe7,
+              1px -1px #e7dfe7,
+              -1px 1px #e7dfe7,
+              0 -2px #9c9a9c,
+              -2px 0 #7b757b,
+              0 2px #424542;
+  width: auto;
+  padding: 5px 10px;
+  margin: 10px auto;
+  
+  background: #04009d;
+  background: -moz-linear-gradient(top,  #04009d 0%, #06004d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#04009d), color-stop(100%,#06004d));
+  background: -webkit-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: -o-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: -ms-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: linear-gradient(to bottom,  #04009d 0%,#06004d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04009d', endColorstr='#06004d',GradientType=0 );
+
+
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+div.ff7 *{
+  color: #eff1ff;
+  text-shadow: 2px 2px #212421,
+               1px 1px #212021;
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 5px 0;
+  background-color: #04009d;
+  background: -moz-linear-gradient(top,  #04009d 0%, #06004d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#04009d), color-stop(100%,#06004d));
+  background: -webkit-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: -o-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: -ms-linear-gradient(top,  #04009d 0%,#06004d 100%);
+  background: linear-gradient(to bottom,  #04009d 0%,#06004d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04009d', endColorstr='#06004d',GradientType=0 );;
+}
+
+.section-row {
+  display: flex;
+  gap: 10px;
+}
+
+.status-box {
+  flex: 1;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows:auto auto auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.status-grid button {
+  background: #222;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 70px;
+}
+
+.status-grid input {
+  width: 40px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.status-grid .status-desc {
+  font-size: 11px;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Drop Down Changes */
+.charsheet select.select {
+  background-color: #333333;   /* dropdown background */
+  color: #ffffff;              /* text color */
+  border: 1px solid #666;   /* optional border */
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.spell-line {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+
+.spell-line label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.spell-line input,
+.spell-line select {
+  margin-top: 2px;
+}
+
+.repcontainer .repitem:not(:last-child) {
+    border-bottom: 1px solid #3366cc;  /* Matches your theme color */
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
